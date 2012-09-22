@@ -263,8 +263,8 @@ echo '<p>'.$_lang['export_site_message'].'</p>';
 
 		for($i=0; $i<$limit; $i++) {
 
-			//$row=mysql_fetch_assoc($rs); // adex13  
-			$row=$modx->db->getRow($rs); // adex13 
+			//$row=mysql_fetch_assoc($rs); // sadex13  
+			$row=$modx->db->getRow($rs); // sadex13 
 
 			$id = $row['id'];
 			printf($_lang['export_site_exporting_document'], $i, $limit, $row['pagetitle'], $id);
