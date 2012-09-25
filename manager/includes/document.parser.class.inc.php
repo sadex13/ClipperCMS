@@ -3496,10 +3496,10 @@ class DocumentParser {
     function dbExtConnect($host, $user, $pass, $dbase) {
         // function to connect to external database
         $tstart= $this->getMicroTime();
-        if (@ !$this->rs= mysql_connect($host, $user, $pass)) {
+        if (@ !$this->rs= $modx->db->connect($host, $user, $pass)) {
             $this->messageQuit("Failed to create connection to the $dbase database!");
         } else {
-            mysql_select_db($dbase);
+            $mysqli->select_db($dbase);
             $tend= $this->getMicroTime();
             $totaltime= $tend - $tstart;
             if ($this->dumpSQL) {
